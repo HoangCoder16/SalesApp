@@ -1,0 +1,9 @@
+E:\C#\SalesApp\Controllers\bin\Debug\Controllers.dll
+E:\C#\SalesApp\Controllers\bin\Debug\Controllers.pdb
+E:\C#\SalesApp\Controllers\obj\Debug\Controllers.csproj.AssemblyReference.cache
+E:\C#\SalesApp\Controllers\obj\Debug\Controllers.csproj.CoreCompileInputs.cache
+E:\C#\SalesApp\Controllers\obj\Debug\Controllers.dll
+E:\C#\SalesApp\Controllers\obj\Debug\Controllers.pdb
+E:\C#\SalesApp\Controllers\bin\Debug\Models.dll
+E:\C#\SalesApp\Controllers\bin\Debug\Models.pdb
+E:\C#\SalesApp\Controllers\obj\Debug\Controllers.csproj.CopyComplete
