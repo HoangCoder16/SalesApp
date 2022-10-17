@@ -82,6 +82,12 @@
     <Compile Include="ItemInformationFrm.Designer.cs">
       <DependentUpon>ItemInformationFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginAcount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAcount.Designer.cs">
+      <DependentUpon>LoginAcount.cs</DependentUpon>
+    </Compile>
     <Compile Include="PaymentFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddEditCustomerFrm.resx">
       <DependentUpon>AddEditCustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +117,9 @@
     <EmbeddedResource Include="ItemInformationFrm.resx">
       <DependentUpon>ItemInformationFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginAcount.resx">
+      <DependentUpon>LoginAcount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -115,6 +130,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -16,7 +16,10 @@ namespace SalesApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Splash());
+            Application.Run(new LoginAcount());
             Application.Run(new HomeFrm());
+
         }
     }
 }

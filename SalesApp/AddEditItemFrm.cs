@@ -73,7 +73,15 @@ namespace SalesApp
             {
                 discount = _discounts[comboDiscount.SelectedIndex];
             }
-            string itemPicture = listPicture.SelectedItem.ToString();
+            string itemPicture;
+            if (listPicture.SelectedItem == null)
+            {
+                 itemPicture = _item.PathItemPicture.ToString();
+            } else
+            {
+                 itemPicture = listPicture.SelectedItem.ToString();
+            }
+            
             try
             {
                 if (string.IsNullOrEmpty(itemName))
@@ -154,5 +162,6 @@ namespace SalesApp
                 listPicture.Items.Add(path);
             }
         }
+
     }
 }
