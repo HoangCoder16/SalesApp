@@ -139,10 +139,7 @@ namespace SalesApp
                     _customer.BirthDate = datePickerBirthDate.Value;
                     _customer.CustomerType = comboCustomerType.Text;
                     _customer.Email = txtEmail.Text;
-                    if (listPicture.SelectedItem != null)
-                    {
-                        _customer.PathCustomerPicture = listPicture.SelectedItem.ToString();
-                    }
+                    _customer.PathCustomerPicture = listPicture.SelectedItem.ToString();
                     var title = "Xác nhận";
                     var msg = "Bạn có chắc chắn muốn lưu các thay đổi?";
                     var ans = ShowConfirmMessage(title, msg);
@@ -184,7 +181,8 @@ namespace SalesApp
                 listPicture.Items.Add(path);
             }
         }
-        private void listPicture_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void listPicture_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             var bitmapImportPicture = new Bitmap(listPicture.SelectedItem.ToString());
             pictureBoxCustomer.Image = bitmapImportPicture;

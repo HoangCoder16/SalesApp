@@ -18,5 +18,3 @@ E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.AddEditItemFrm.resources
 E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.ItemInformationFrm.resources
 E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.AddEditDiscountFrm.resources
 E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.AddEditCustomerFrm.resources
-E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.Splash.resources
-E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.LoginAcount.resources
