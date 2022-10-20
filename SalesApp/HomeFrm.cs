@@ -43,7 +43,7 @@ namespace SalesApp
         public HomeFrm()
         {
             InitializeComponent();
-            CenterToScreen();
+            CenterToScreen();     
             _items = new List<Item>();
             _discounts = new List<Discount>();
             _customers = new List<Customer>();
