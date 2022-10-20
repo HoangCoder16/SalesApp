@@ -97,7 +97,7 @@ namespace SalesApp
                 else
                 {
                     // tạo mới ct km
-                    Discount discount = new Discount(0, txtDiscountName.Text, dtPickerStart.Value,
+                    Discount discount = new Discount(-1, txtDiscountName.Text, dtPickerStart.Value,
                         dtPickerEnd.Value, comboDiscountType.Text, (int)numericDiscountAmount.Value,
                         (int)numericDiscountPercent.Value);
                     _controller.AddNewItem(discount);

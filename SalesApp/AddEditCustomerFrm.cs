@@ -177,12 +177,13 @@ namespace SalesApp
             FolderBrowserDialog importFoderPicture = new FolderBrowserDialog();
             if (importFoderPicture.ShowDialog() == DialogResult.OK)
             {
-                richTextBoxAddFoderPicture.Text = importFoderPicture.SelectedPath;
+                // richTextBoxAddFoderPicture.Text = importFoderPicture.SelectedPath;
+                foreach (string path in Directory.GetFiles(importFoderPicture.SelectedPath))
+                {
+                    listPicture.Items.Add(path);
+                }
             }
-            foreach (string path in Directory.GetFiles(importFoderPicture.SelectedPath))
-            {
-                listPicture.Items.Add(path);
-            }
+           
         }
         private void listPicture_SelectedIndexChanged(object sender, EventArgs e)
         {

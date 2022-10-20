@@ -25,11 +25,11 @@ namespace SalesApp
             CenterToParent();
             txtId.Text = "Mã tự động";
         }
-
         public AddEditItemFrm(IViewController masterView, List<Discount> discounts, Item item = null) : this()
         {
             _discounts = discounts;
             _controller = masterView;
+            ShowDiscounts(_discounts);
             if (item != null)
             {
                 Text = "CẬP NHẬT THÔNG TIN MẶT HÀNG";
@@ -38,7 +38,17 @@ namespace SalesApp
                 ShowItemData();
             }
         }
-
+       
+        private void ShowDiscounts(List<Discount> discounts)
+        {
+            List<string> discountList = new List<string>();
+            foreach (var discount in discounts)
+            {
+                discountList.Add(discount.Name);
+            }
+            comboDiscount.DataSource = discountList;
+            comboDiscount.SelectedIndex = -1;
+        }
         private void ShowItemData()
         {
             txtId.Text = $"{_item.ItemId}";
@@ -48,20 +58,37 @@ namespace SalesApp
             numericPrice.Value = _item.Price;
             datePickerReleaseDate.Value = _item.ReleaseDate;
             comboItemType.Text = _item.ItemType;
-            for (int i = 0; i < comboDiscount.Items.Count; i++)
+
+            foreach (Discount i in _discounts)
+            {
+                if (i.DiscountId == _item.Discount.DiscountId)
+                {
+                    comboDiscount.Text = i.Name;
+                }
+            }
+/*            for (int i = 0; i < comboDiscount.Items.Count; i++)
             {
                 if (_item.Discount?.Name.CompareTo(comboDiscount.Items[i]) == 0)
                 {
                     comboDiscount.SelectedIndex = i;
                     break;
                 }
-            }
+            }*/
+
+   /*         for (int i = 0; i < comboDiscount.Items.Count; i++)
+            {
+                if (_item?.Discount?.Name.CompareTo(comboDiscount.Items[i]) == 0)
+                {
+                    comboDiscount.SelectedIndex = i;
+                    break;
+                }
+            }*/
             pictureBoxItem.Image = new Bitmap(_item.PathItemPicture);
         }
 
         private void BtnAddItemClick(object sender, EventArgs e)
-        {           
-          //  var id = int.Parse(txtId.Text);
+        {
+            //  var id = int.Parse(txtId.Text);
             var itemName = txtItemName.Text;
             var itemType = comboItemType.Text;
             var itemPrice = (int)numericPrice.Value;
@@ -76,24 +103,38 @@ namespace SalesApp
             string itemPicture;
             if (listPicture.SelectedItem == null)
             {
-                 itemPicture = _item.PathItemPicture.ToString();
-            } else
-            {
-                 itemPicture = listPicture.SelectedItem.ToString();
+                itemPicture = _item.PathItemPicture.ToString();
             }
-            
-            try
+            else
             {
+                itemPicture = listPicture.SelectedItem.ToString();
+            }
+
+            try
+            { 
                 if (string.IsNullOrEmpty(itemName))
                 {
                     var msg = "Tên mặt hàng không được để trống.";
-                    throw new InvalidItemNameException(msg);
+                   throw new InvalidItemNameException(msg);
                 }
                 if (itemType == null || itemType == "")
                 {
                     var msg = "Vui lòng chọn loại mặt hàng trước.";
-                    MessageBox.Show(msg, "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    // MessageBox.Show(msg, "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new InvalidItemNameException(msg);                 
+                }
+
+                if (quantity == 0)
+                {
+                    var msg = "Vui lòng cung cấp  số lượng mặt hàng trước.";
+                    //  MessageBox.Show(msg, "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new InvalidItemNameException(msg);                   
+                }
+                if (brand == null || brand == "")
+                {
+                    var msg = "Vui lòng cung cấp  hãng sx mặt hàng trước.";
+                    // MessageBox.Show(msg, "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw new InvalidItemNameException(msg);
                 }
                 if (btnAddNew.Text.CompareTo("Cập nhật") == 0)
                 {
@@ -118,6 +159,7 @@ namespace SalesApp
                 {
                     Item item = new Item(-1, itemName, itemType, quantity, brand, manufactureDate, itemPrice, discount, itemPicture);
                     _controller.AddNewItem(item);
+                    MessageBox.Show("Bạn đã thêm mặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             catch (InvalidItemNameException ex)
@@ -125,7 +167,6 @@ namespace SalesApp
                 MessageBox.Show(ex.Message, "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void BtnCancelClick(object sender, EventArgs e)
         {
             var title = "Xác nhận";
@@ -142,25 +183,23 @@ namespace SalesApp
             return MessageBox.Show(message, title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
-  
-
         private void listPicture_SelectedIndexChanged(object sender, EventArgs e)
         {
             var bitmapImportPicture = new Bitmap(listPicture.SelectedItem.ToString());
             pictureBoxItem.Image = bitmapImportPicture;
         }
-
         private void pictureBoxItem_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog importFoderPicture = new FolderBrowserDialog();
             if (importFoderPicture.ShowDialog() == DialogResult.OK)
             {
-                richTextBoxAddFoderPicture.Text = importFoderPicture.SelectedPath;
+                //richTextBoxAddFoderPicture.Text = importFoderPicture.SelectedPath;
+                foreach (string path in Directory.GetFiles(importFoderPicture.SelectedPath))
+                {
+                    listPicture.Items.Add(path);
+                }
             }
-            foreach (string path in Directory.GetFiles(importFoderPicture.SelectedPath))
-            {
-                listPicture.Items.Add(path);
-            }
+          
         }
 
     }

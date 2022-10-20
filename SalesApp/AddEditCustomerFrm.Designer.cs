@@ -33,7 +33,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.pictureBoxCustomer = new System.Windows.Forms.PictureBox();
             this.listPicture = new System.Windows.Forms.ListBox();
-            this.richTextBoxAddFoderPicture = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,31 +57,35 @@
             // 
             // btnAddNew
             // 
-            this.btnAddNew.Location = new System.Drawing.Point(714, 586);
+            this.btnAddNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNew.Location = new System.Drawing.Point(12, 323);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(135, 37);
+            this.btnAddNew.Size = new System.Drawing.Size(135, 49);
             this.btnAddNew.TabIndex = 10;
             this.btnAddNew.Text = "Thêm mới";
-            this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.UseVisualStyleBackColor = false;
             this.btnAddNew.Click += new System.EventHandler(this.BtnAddUpdateClick);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(942, 586);
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(319, 323);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(135, 37);
+            this.btnCancel.Size = new System.Drawing.Size(135, 49);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Hủy bỏ";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancelClick);
             // 
             // pictureBoxCustomer
             // 
             this.pictureBoxCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pictureBoxCustomer.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCustomer.Image")));
-            this.pictureBoxCustomer.Location = new System.Drawing.Point(294, 122);
+            this.pictureBoxCustomer.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxCustomer.Name = "pictureBoxCustomer";
-            this.pictureBoxCustomer.Size = new System.Drawing.Size(246, 182);
+            this.pictureBoxCustomer.Size = new System.Drawing.Size(442, 212);
             this.pictureBoxCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCustomer.TabIndex = 28;
             this.pictureBoxCustomer.TabStop = false;
@@ -92,24 +95,16 @@
             // 
             this.listPicture.FormattingEnabled = true;
             this.listPicture.ItemHeight = 20;
-            this.listPicture.Location = new System.Drawing.Point(656, 122);
+            this.listPicture.Location = new System.Drawing.Point(12, 230);
             this.listPicture.Name = "listPicture";
-            this.listPicture.Size = new System.Drawing.Size(504, 124);
+            this.listPicture.Size = new System.Drawing.Size(442, 64);
             this.listPicture.TabIndex = 29;
             this.listPicture.SelectedIndexChanged += new System.EventHandler(this.listPicture_SelectedIndexChanged);
-            // 
-            // richTextBoxAddFoderPicture
-            // 
-            this.richTextBoxAddFoderPicture.Location = new System.Drawing.Point(656, 273);
-            this.richTextBoxAddFoderPicture.Name = "richTextBoxAddFoderPicture";
-            this.richTextBoxAddFoderPicture.Size = new System.Drawing.Size(504, 31);
-            this.richTextBoxAddFoderPicture.TabIndex = 30;
-            this.richTextBoxAddFoderPicture.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(299, 367);
+            this.label1.Location = new System.Drawing.Point(12, 411);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 31;
@@ -118,7 +113,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 409);
+            this.label2.Location = new System.Drawing.Point(14, 453);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 33;
@@ -127,7 +122,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(299, 450);
+            this.label3.Location = new System.Drawing.Point(12, 494);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 34;
@@ -137,15 +132,15 @@
             // 
             this.datePickerCreatedAcc.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             this.datePickerCreatedAcc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePickerCreatedAcc.Location = new System.Drawing.Point(904, 479);
+            this.datePickerCreatedAcc.Location = new System.Drawing.Point(166, 720);
             this.datePickerCreatedAcc.Name = "datePickerCreatedAcc";
-            this.datePickerCreatedAcc.Size = new System.Drawing.Size(256, 26);
+            this.datePickerCreatedAcc.Size = new System.Drawing.Size(288, 26);
             this.datePickerCreatedAcc.TabIndex = 48;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(299, 490);
+            this.label4.Location = new System.Drawing.Point(14, 534);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 36;
@@ -156,16 +151,16 @@
             this.comboCustomerType.FormattingEnabled = true;
             this.comboCustomerType.Items.AddRange(new object[] {
             "Khách mua lẻ",
-            "Khách mua buôn"});
-            this.comboCustomerType.Location = new System.Drawing.Point(904, 441);
+            "Khách nhập hàng"});
+            this.comboCustomerType.Location = new System.Drawing.Point(166, 682);
             this.comboCustomerType.Name = "comboCustomerType";
-            this.comboCustomerType.Size = new System.Drawing.Size(256, 28);
+            this.comboCustomerType.Size = new System.Drawing.Size(288, 28);
             this.comboCustomerType.TabIndex = 46;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 531);
+            this.label5.Location = new System.Drawing.Point(14, 575);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 20);
             this.label5.TabIndex = 38;
@@ -173,43 +168,43 @@
             // 
             // numericPoint
             // 
-            this.numericPoint.Location = new System.Drawing.Point(904, 401);
+            this.numericPoint.Location = new System.Drawing.Point(149, 642);
             this.numericPoint.Maximum = new decimal(new int[] {
             99999999,
             0,
             0,
             0});
             this.numericPoint.Name = "numericPoint";
-            this.numericPoint.Size = new System.Drawing.Size(256, 26);
+            this.numericPoint.Size = new System.Drawing.Size(305, 26);
             this.numericPoint.TabIndex = 44;
             // 
             // txtCustomerId
             // 
             this.txtCustomerId.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtCustomerId.Location = new System.Drawing.Point(436, 364);
+            this.txtCustomerId.Location = new System.Drawing.Point(149, 408);
             this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Size = new System.Drawing.Size(260, 26);
+            this.txtCustomerId.Size = new System.Drawing.Size(305, 26);
             this.txtCustomerId.TabIndex = 32;
             this.txtCustomerId.Text = "CMND/CCCD";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(904, 358);
+            this.txtEmail.Location = new System.Drawing.Point(149, 610);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(256, 26);
+            this.txtEmail.Size = new System.Drawing.Size(305, 26);
             this.txtEmail.TabIndex = 42;
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(436, 406);
+            this.txtFullName.Location = new System.Drawing.Point(149, 450);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(260, 26);
+            this.txtFullName.Size = new System.Drawing.Size(305, 26);
             this.txtFullName.TabIndex = 35;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(724, 487);
+            this.label9.Location = new System.Drawing.Point(8, 726);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(152, 20);
             this.label9.TabIndex = 47;
@@ -217,15 +212,15 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(436, 531);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(149, 575);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(260, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(305, 26);
             this.txtPhoneNumber.TabIndex = 40;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(724, 444);
+            this.label8.Location = new System.Drawing.Point(12, 697);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(136, 20);
             this.label8.TabIndex = 45;
@@ -235,15 +230,15 @@
             // 
             this.datePickerBirthDate.CustomFormat = "dd/MM/yyyy";
             this.datePickerBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePickerBirthDate.Location = new System.Drawing.Point(436, 450);
+            this.datePickerBirthDate.Location = new System.Drawing.Point(149, 494);
             this.datePickerBirthDate.Name = "datePickerBirthDate";
-            this.datePickerBirthDate.Size = new System.Drawing.Size(260, 26);
+            this.datePickerBirthDate.Size = new System.Drawing.Size(305, 26);
             this.datePickerBirthDate.TabIndex = 37;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(724, 406);
+            this.label7.Location = new System.Drawing.Point(14, 648);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 20);
             this.label7.TabIndex = 43;
@@ -251,15 +246,15 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(436, 490);
+            this.txtAddress.Location = new System.Drawing.Point(149, 534);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(260, 26);
+            this.txtAddress.Size = new System.Drawing.Size(305, 26);
             this.txtAddress.TabIndex = 39;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(724, 364);
+            this.label6.Location = new System.Drawing.Point(14, 616);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 41;
@@ -270,9 +265,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1374, 765);
+            this.ClientSize = new System.Drawing.Size(470, 765);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddNew);
@@ -295,7 +289,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBoxCustomer);
             this.Controls.Add(this.listPicture);
-            this.Controls.Add(this.richTextBoxAddFoderPicture);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -315,7 +308,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.PictureBox pictureBoxCustomer;
         private System.Windows.Forms.ListBox listPicture;
-        private System.Windows.Forms.RichTextBox richTextBoxAddFoderPicture;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

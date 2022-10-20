@@ -20,3 +20,6 @@ E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.AddEditDiscountFrm.resources
 E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.AddEditCustomerFrm.resources
 E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.Splash.resources
 E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.LoginAcount.resources
+E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.GoogleMapFrm.resources
+E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.AddEditBillFrm.resources
+E:\C#\SalesApp\SalesApp\obj\Debug\SalesApp.TurnoverFrm.resources

@@ -114,7 +114,7 @@
             this.txtDiscountId.Name = "txtDiscountId";
             this.txtDiscountId.Size = new System.Drawing.Size(265, 26);
             this.txtDiscountId.TabIndex = 7;
-            this.txtDiscountId.Text = "0";
+            this.txtDiscountId.Text = "Mã Tự Động";
             // 
             // label6
             // 

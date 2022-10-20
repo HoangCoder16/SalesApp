@@ -70,6 +70,13 @@
     <Compile Include="AddEditItemFrm.Designer.cs">
       <DependentUpon>AddEditItemFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionDatabase.cs" />
+    <Compile Include="GoogleMapFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoogleMapFrm.Designer.cs">
+      <DependentUpon>GoogleMapFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +109,15 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="TurnoverFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TurnoverFrm.Designer.cs">
+      <DependentUpon>TurnoverFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEditBillFrm.resx">
+      <DependentUpon>AddEditBillFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddEditCustomerFrm.resx">
       <DependentUpon>AddEditCustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddEditItemFrm.resx">
       <DependentUpon>AddEditItemFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoogleMapFrm.resx">
+      <DependentUpon>GoogleMapFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeFrm.resx">
       <DependentUpon>HomeFrm.cs</DependentUpon>
@@ -132,6 +151,9 @@
     </Compile>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TurnoverFrm.resx">
+      <DependentUpon>TurnoverFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
