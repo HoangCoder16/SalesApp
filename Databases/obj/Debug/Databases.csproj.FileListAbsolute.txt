@@ -1,0 +1,9 @@
+E:\C#\SalesApp\Databases\bin\Debug\Databases.dll
+E:\C#\SalesApp\Databases\bin\Debug\Databases.pdb
+E:\C#\SalesApp\Databases\bin\Debug\Models.dll
+E:\C#\SalesApp\Databases\bin\Debug\Models.pdb
+E:\C#\SalesApp\Databases\obj\Debug\Databases.csproj.AssemblyReference.cache
+E:\C#\SalesApp\Databases\obj\Debug\Databases.csproj.CoreCompileInputs.cache
+E:\C#\SalesApp\Databases\obj\Debug\Databases.csproj.CopyComplete
+E:\C#\SalesApp\Databases\obj\Debug\Databases.dll
+E:\C#\SalesApp\Databases\obj\Debug\Databases.pdb
