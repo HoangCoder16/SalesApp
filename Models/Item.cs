@@ -8,7 +8,7 @@ namespace Models
 {
     public class Item : IComparable<Item>
     {
-        static int s_autoId = 100000;
+        static int s_autoId = 100;
         public int ItemId { get; set; }
         public string ItemName { get; set; }
         public string ItemType { get; set; }
@@ -20,10 +20,10 @@ namespace Models
         public string PathItemPicture { get; set; }
         public Item() { }
 
-/*        public Item(int id)
+        public Item(int id)
         {
             ItemId = id > 0 ? id : s_autoId++;
-        }*/
+        }
 
         public Item(int itemID, string itemName, string itemType, int quantity,
             string brand, DateTime releaseDate,

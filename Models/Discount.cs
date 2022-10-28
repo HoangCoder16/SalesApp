@@ -18,6 +18,9 @@ namespace Models
         public int DiscountPercent { get; set; }
 
         public Discount() { }
+        public Discount(int discountId) {
+            DiscountId = discountId;
+        }
         public Discount(int discountId, string name, DateTime startTime,
             DateTime endTime, string discounType, int discountPriceAmount, int discountPercent)
         {
@@ -36,10 +39,10 @@ namespace Models
                    DiscountId == discount.DiscountId;
         }
 
-        public override int GetHashCode()
+       /* public override int GetHashCode()
         {
             return 1574009819 + DiscountId.GetHashCode();
-        }
+        }*/
 
 
 

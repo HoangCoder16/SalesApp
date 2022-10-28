@@ -1,4 +1,5 @@
 ﻿using Models;
+using System;
 using System.Text.RegularExpressions;
 
 namespace Controllers
@@ -28,6 +29,26 @@ namespace Controllers
         public int CompareItemByQuantity(Item item1, Item item2)
         {
             return item2.Quantity.CompareTo(item1.Quantity);
+        }
+
+        public string GetDiscountName(Discount discount)
+        {
+            if (discount == null)
+            {
+                return "-";
+            }
+            else
+            {
+                var currentTime = DateTime.Now;
+                if (currentTime >= discount.StartTime && currentTime <= discount.EndTime)
+                {
+                    return discount.Name;
+                }
+                else
+                {
+                    return "-";
+                }
+            }
         }
 
         public bool IsItemBrandMatch(Item item, string brand)

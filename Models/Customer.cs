@@ -11,6 +11,11 @@ namespace Models
         public string PathCustomerPicture { get; set; }
         public Customer() { }
 
+
+        public Customer(string PersonId) {
+            this.PersonId = PersonId;
+        }
+
         public Customer(string customerType, int point, DateTime createTime, string email,string pathCustomerPicture)
         {
             CustomerType = customerType;
@@ -39,13 +44,13 @@ namespace Models
                    PersonId == customer.PersonId;
         }
 
-        public override int GetHashCode()
+       /* public override int GetHashCode()
         {
             int hashCode = 2079290131;
             hashCode = hashCode * -1521134295 + base.GetHashCode();
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(PersonId);
             return hashCode;
-        }
+        }*/
 
         public int CompareTo(Customer other)
         {

@@ -14,5 +14,6 @@ namespace Controllers
         bool IsItemBrandMatch(Item item, string brand);
         bool IsItemPriceMatch(Item item, int from, int to);
         bool IsItemQuantityMatch(Item item, int from, int to);
+        string GetDiscountName(Discount discount);
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Models
 {
@@ -15,6 +11,8 @@ namespace Models
         {
         }
 
+        public BillDetail(int id) : base(id) { }
+
         public BillDetail(string paymentMethod, string staffName)
         {
             PaymentMethod = paymentMethod;
@@ -22,7 +20,7 @@ namespace Models
         }
 
         public BillDetail(int billId, Cart cart, DateTime createdTime, int totalItem,
-            long subTotal, long totalDiscountAmount, long totalAmount, string status,
+            int subTotal, int totalDiscountAmount, int totalAmount, string status,
             string paymentMethod, string staffName) :
             base(billId, cart, createdTime, totalItem, subTotal,
                 totalDiscountAmount, totalAmount, status)

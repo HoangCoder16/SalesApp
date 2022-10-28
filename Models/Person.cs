@@ -36,10 +36,10 @@ namespace Models
                    PersonId == person.PersonId;
         }
 
-        public override int GetHashCode()
+      /*  public override int GetHashCode()
         {
             return -1255590651 + EqualityComparer<string>.Default.GetHashCode(PersonId);
-        }
+        }*/
 
         public int CompareTo(Person other)
         {

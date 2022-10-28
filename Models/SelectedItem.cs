@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Models
 {
@@ -10,8 +6,17 @@ namespace Models
     {
         public int NumberOfSelectedItem { get; set; }
         public int PriceAfterDiscount { get; set; }
+        public int TotalAmount { get; set; }
+        public SelectedItem()
+        {
+            CalculatePriceAfterDiscount();
+        }
 
-        public SelectedItem() { }
+        public SelectedItem(Item item) : base(item.ItemId, item.ItemName, item.ItemType,
+            item.Quantity, item.Brand, item.ReleaseDate, item.Price, item.Discount)
+        {
+            CalculatePriceAfterDiscount();
+        }
 
         public SelectedItem(int numberOfSelectedItem)
         {
@@ -24,16 +29,17 @@ namespace Models
             if (Discount == null)
             {
                 PriceAfterDiscount = Price;
-            } else
+            }
+            else
             {
-                var currenTime = DateTime.Now;
-                if (currenTime >= Discount.StartTime && currenTime <= Discount.EndTime)
+                var currentTime = DateTime.Now;
+                if (currentTime >= Discount.StartTime && currentTime <= Discount.EndTime)
                 {
                     if (Discount.DiscountPercent > 0)
                     {
                         PriceAfterDiscount = (int)(Price * (1 - 1.0f * Discount.DiscountPercent / 100));
                     }
-                    if (Discount.DiscountPriceAmount > 0) 
+                    if (Discount.DiscountPriceAmount > 0)
                     {
                         PriceAfterDiscount = Price - Discount.DiscountPriceAmount;
                     }
@@ -41,16 +47,22 @@ namespace Models
             }
         }
 
-        public SelectedItem(int itemID, string itemName, string itemType,
-            int quantity, string brand, DateTime releaseDate,
-          int price, Discount discount,string pathPictureItem, int numberOfSelectedItem) :
-            base(itemID, itemName, itemType, quantity, brand, releaseDate, price, discount,pathPictureItem)
-
+        public SelectedItem(int itemId, string itemName, string itemType,
+            int quantity, string brand, DateTime releaseDate, int price,
+            Discount discount, int numberOfSelectedItem) :
+            base(itemId, itemName, itemType, quantity, brand, releaseDate, price, discount)
         {
-
             NumberOfSelectedItem = numberOfSelectedItem;
-            PriceAfterDiscount = Price;
+        }
 
+        public SelectedItem(int itemId, string itemName,int numberOfSelectedItem,int price,int priceAfterDiscount,int totalAmount)
+        {
+            ItemId = itemId;
+            ItemName = itemName;
+            NumberOfSelectedItem = numberOfSelectedItem;
+            Price = price;
+            PriceAfterDiscount = priceAfterDiscount;
+            TotalAmount = totalAmount;
         }
     }
 }
